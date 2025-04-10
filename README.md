@@ -15,11 +15,12 @@ I focuse on simulating combustion processes using the Cantera library and proces
    - Saves simulation results (velocity, temperature, mole fractions) in CSV files.
    - Maintains a detailed log of all calculations.
 
-2. **Mechanism Conversion**:
+2. **Mechanism**:
+   - This is a code from developers.
    - Converts chemical reaction mechanisms between different formats (e.g., CK2YAML).
    - Facilitates compatibility with various simulation tools.
 
-3. **Data Preprocessing**:
+4. **Data Preprocessing**:
    - Processes simulation output files to extract and aggregate relevant data.
    - Supports custom column selection and summation operations.
 
