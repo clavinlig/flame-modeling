@@ -3,7 +3,7 @@
 
 This is just a project for my bachelor diploma. We are working with MacKenna Burner.
 
-I focuse on simulating combustion processes using the Cantera library and processing simulation output data. It includes modules for flame simulations, mechanism and data preprocessing. The project is structured to handle both computational modeling and data analysis tasks efficiently.
+I focuse on simulating combustion processes using the Cantera library and processing simulation output data. It includes modules for flame simulations, mechanism and data preprocessing.
 
 ---
 
@@ -13,15 +13,14 @@ I focuse on simulating combustion processes using the Cantera library and proces
    - Simulates stabilized flames using Cantera.
    - Customizable parameters such as fuel composition, flow rates, temperature, pressure, etc.
    - Saves simulation results (velocity, temperature, mole fractions) in CSV files.
-   - Maintains a detailed log of all calculations.
+   - Maintains a detailed log of calculations.
 
 2. **Mechanism**:
-   - This is a code from developers.
-   - Converts chemical reaction mechanisms between different formats (e.g., CK2YAML).
+   - A code from developers.
+   - Converts chemical reaction mechanisms from chemkin to yaml.
 
 4. **Data Preprocessing**:
    - Processes simulation output files to extract and aggregate relevant data.
-   - Supports custom column selection and summation operations.
 
 ## Contact
 
