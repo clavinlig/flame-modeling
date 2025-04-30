@@ -77,7 +77,7 @@ class Flame:
         Возвращает:
         - Мольный состав (словарь) смеси в эксперименте.
         """
-        #проверить негорючее пламя, например 
+
         fuel_flow_rate = self.rate_convert(self.fuel_flow_rate)
         air_flow_rate = self.rate_convert(self.air_flow_rate)
 
@@ -106,13 +106,13 @@ class Flame:
         fuel_flow_rate = self.rate_convert(self.fuel_flow_rate)
         air_flow_rate = self.rate_convert(self.air_flow_rate)
         
-        burner_area = np.pi * self.d_burner ** 2 / 4  # (m^2) площадь горелки
+        burner_area = np.pi * self.d_burner ** 2 / 4  # (m^2)
         gas = ct.Solution(self.mech)
     
         mix_comp = self.mix()
     
         gas.TPX = self.t_room, self.pressure, mix_comp
-        total_flow = fuel_flow_rate + air_flow_rate # массовый(!) расход, поправить
+        total_flow = fuel_flow_rate + air_flow_rate 
         mass_flux = total_flow * gas.density / burner_area
         return mass_flux
 
@@ -137,16 +137,16 @@ class Flame:
         gas.TP = self.t_burner, self.pressure
 
         # Create the stagnation flow object with a non-reactive surface
-
+        
         sim = ct.ImpingingJet(gas=gas, width=self.height)
         sim.inlet.mdot = mdot
-        sim.surface.T = self.t_body #темп тела сверху
-        sim.set_grid_min(2e-5) #мин разрешение сетки
+        sim.surface.T = self.t_body 
+        sim.set_grid_min(2e-5) 
         sim.set_refine_criteria(
             ratio=refine_criteria.ratio,
             slope=refine_criteria.slope,
             curve=refine_criteria.curve
-            # prune=grid_refine_criteria.prune #необяз при перв.прибл, убир узел при дост гладкости
+            # prune=grid_refine_criteria.prune #убир узел при дост гладкости
         )
         sim.set_initial_guess(products='equil')  # assume adiabatic equilibrium products
         sim.radiation_enabled = True #учит. изл.
@@ -163,7 +163,7 @@ class Flame:
 
         current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
-        # Формируем запись в лог
+        # log
         log_entry = (
             f"Date and time: {current_time}\n"
             f"Flame Data: {self.__dict__}\n"

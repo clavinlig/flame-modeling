@@ -23,7 +23,7 @@ for input_file_name in input_files:
     input_path = Path(input_dir) / input_file_name
     
     if not input_path.exists():
-        print(f"Файл {input_file_name} не найден. Пропускаем...")
+        print(f"Файл {input_file_name} не найден.")
         continue
     
     data = pd.read_csv(input_path)

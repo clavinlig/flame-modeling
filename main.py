@@ -34,13 +34,6 @@ flame4 = Flame(fuel = {'C2H4':1},
     pressure = ct.one_atm,
     note = '700 K ethylene')
 
-# flame4 = Flame(fuel = {'C2H2':0.8461, 'CH3OCH3': 0.1539},
-#     fuel_flow_rate = 52,
-#     air_flow_rate = 345,
-#     t_burner = 400,
-#     pressure = ct.one_atm,
-#     note = '15 DME')
-
 
 flames = [flame3, flame4]
 

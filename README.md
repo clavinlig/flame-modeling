@@ -10,16 +10,16 @@ I focuse on simulating combustion processes using the Cantera library and proces
 ## Features
 
 1. **Flame Simulation**:
-   - Simulates stabilized flames using Cantera.
+   - Simulates stabilized flames.
    - Customizable parameters such as fuel composition, flow rates, temperature, pressure, etc.
-   - Saves simulation results (velocity, temperature, mole fractions) in CSV files.
+   - Saves simulation results in CSV files.
    - Maintains a detailed log of calculations.
 
 2. **Mechanism**:
    - A code from developers.
    - Converts chemical reaction mechanisms from chemkin to yaml.
 
-4. **Data Preprocessing**:
+3. **Data Preprocessing**:
    - Processes simulation output files to extract and aggregate relevant data.
 
 ## Contact
